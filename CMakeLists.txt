@@ -14,5 +14,5 @@ target_link_libraries(hello_world_minimal restinio::restinio)
 target_link_libraries(hello_world_minimal ${CONAN_LIBS})
 
 if(WIN32)
-	target_link_libraries(hello_world_minimal wsock32 ws2_32)
+    target_link_libraries(hello_world_minimal wsock32 ws2_32)
 endif()
