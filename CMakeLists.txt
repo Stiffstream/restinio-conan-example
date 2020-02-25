@@ -6,7 +6,6 @@ include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
 find_package(restinio CONFIG REQUIRED)
-find_package(fmt CONFIG REQUIRED)
 
 add_executable(hello_world_minimal hello_world_minimal.cpp)
 
