@@ -1,4 +1,4 @@
-FROM ubuntu:18.10
+FROM ubuntu:19.10
 ARG boost_libs
 ARG boost_libs=none
 
@@ -8,7 +8,12 @@ RUN apt-get update && \
     cmake curl wget pkg-config \
     libtool python3 python3-pip
 
-RUN pip3 install conan && \
+RUN pip3 install conan
+
+RUN conan profile new default --detect
+RUN conan profile update settings.compiler.libcxx=libstdc++11 default
+
+RUN \
     conan remote add stiffstream https://api.bintray.com/conan/stiffstream/public && \
     conan remote add public-conan https://api.bintray.com/conan/bincrafters/public-conan
 
