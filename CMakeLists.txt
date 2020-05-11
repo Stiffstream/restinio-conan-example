@@ -8,4 +8,4 @@ conan_basic_setup()
 add_executable(hello_world_minimal hello_world_minimal.cpp)
 
 target_link_libraries(hello_world_minimal ${CONAN_LIBS})
-set_property(TARGET (hello_world_minimal PROPERTY CXX_STANDARD 14)
+set_property(TARGET hello_world_minimal PROPERTY CXX_STANDARD 14)
