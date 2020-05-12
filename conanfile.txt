@@ -1,5 +1,5 @@
 [requires]
-restinio/0.6.7@stiffstream/stable
+restinio/0.6.7.1@stiffstream/stable
 
 [generators]
 cmake
